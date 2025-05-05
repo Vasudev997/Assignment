@@ -1,0 +1,50 @@
+<!-- q9.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q9: useEffect Component Mount</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #2e3c62;
+      color: #f1f1f1;
+      padding: 30px;
+    }
+    h1 {
+      color: #ffc107;
+    }
+    pre {
+      background: #1e2b4f;
+      padding: 20px;
+      border-left: 5px solid #ffc107;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q9: useEffect Component Mount</h1>
+  <pre><code>import React, { useEffect } from 'react';
+
+function ComponentMount() {
+  useEffect(() => {
+    console.log('Component mounted');
+  }, []);
+
+  return <h2>Component Mounted. Check console.</h2>;
+}
+
+export default ComponentMount;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

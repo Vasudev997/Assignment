@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q21: Country Dropdown List</title>
+  <style>
+    body {
+      font-family: 'Verdana', sans-serif;
+      background: linear-gradient(to right, #fff3e0, #ffcc80);
+      color: #6d4c41;
+      padding: 20px;
+    }
+    h1 {
+      color: #ef6c00;
+    }
+    pre {
+      background: #ffe0b2;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ef6c00;
+    }
+    a {
+      color: #ef6c00;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q21: Country Dropdown List</h1>
+  <pre><code>import React, { useState } from 'react';
+
+const countries = ['India', 'USA', 'Canada', 'UK'];
+
+function CountryDropdown() {
+  const [country, setCountry] = useState('');
+
+  return (
+    <div>
+      <select value={country} onChange={(e) => setCountry(e.target.value)}>
+        <option value="">Select Country</option>
+        {countries.map((c, i) => <option key={i} value={c}>{c}</option>)}
+      </select>
+      {country && <p>You selected: {country}</p>}
+    </div>
+  );
+}
+
+export default CountryDropdown;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

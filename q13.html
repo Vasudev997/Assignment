@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q13: Auto-incrementing Counter</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: linear-gradient(to right, #2193b0, #6dd5ed);
+      padding: 30px;
+      color: #fff;
+    }
+    h1 {
+      color: #ffe;
+    }
+    pre {
+      background: rgba(255, 255, 255, 0.2);
+      border-left: 5px solid #ffe;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    a {
+      color: #fff8dc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q13: Auto-incrementing Counter</h1>
+  <pre><code>import React, { useState, useEffect } from 'react';
+
+function AutoCounter() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return <h2>Counter: {count}</h2>;
+}
+
+export default AutoCounter;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

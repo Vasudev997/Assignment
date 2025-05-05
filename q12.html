@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q12: Login Conditional Rendering</title>
+  <style>
+    body {
+      font-family: 'Verdana', sans-serif;
+      background: #654ea3;
+      background: linear-gradient(to right, #eaafc8, #654ea3);
+      padding: 30px;
+      color: #fff;
+    }
+    h1 {
+      color: #fff8dc;
+    }
+    pre {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-left: 5px solid #fff;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    a {
+      color: #fff8dc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q12: Login Conditional Rendering</h1>
+  <pre><code>import React, { useState } from 'react';
+
+function LoginStatus() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  return (
+    <div>
+      {isLoggedIn ? <h2>Welcome back!</h2> : <h2>Please log in.</h2>}
+      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+        {isLoggedIn ? 'Logout' : 'Login'}
+      </button>
+    </div>
+  );
+}
+
+export default LoginStatus;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

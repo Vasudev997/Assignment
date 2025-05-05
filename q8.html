@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q8: Controlled Form Component</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      padding: 30px;
+      color: #fff;
+    }
+    h1 {
+      color: #ffe;
+    }
+    pre {
+      background: rgba(255, 255, 255, 0.1);
+      border-left: 5px solid #fff;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    a {
+      color: #ffe;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q8: Controlled Form Component</h1>
+  <pre><code>import React, { useState } from 'react';
+
+function ControlledForm() {
+  const [name, setName] = useState('');
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    alert(`Submitted Name: ${name}`);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+export default ControlledForm;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

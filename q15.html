@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q15: Toggle Paragraph Visibility</title>
+  <style>
+    body {
+      font-family: 'Lucida Sans', sans-serif;
+      background: linear-gradient(to right, #ff9966, #ff5e62);
+      padding: 30px;
+      color: #fff;
+    }
+    h1 {
+      color: #fff5ee;
+    }
+    pre {
+      background: rgba(255, 255, 255, 0.15);
+      border-left: 5px solid #fff5ee;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    a {
+      color: #fff5ee;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q15: Toggle Paragraph Visibility</h1>
+  <pre><code>import React, { useState } from 'react';
+
+function ToggleParagraph() {
+  const [visible, setVisible] = useState(true);
+
+  return (
+    <div>
+      <button onClick={() => setVisible(!visible)}>
+        {visible ? 'Hide' : 'Show'} Paragraph
+      </button>
+      {visible && <p>This is a paragraph that can be toggled.</p>}
+    </div>
+  );
+}
+
+export default ToggleParagraph;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

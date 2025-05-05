@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q3: Conditional Rendering in React</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      color: #2c3e50;
+      padding: 30px;
+    }
+    h1 {
+      color: #2980b9;
+    }
+    pre {
+      background: #ecf0f1;
+      border-left: 5px solid #3498db;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    a {
+      color: #2980b9;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q3: Conditional Rendering in React</h1>
+  <pre><code>import React from 'react';
+
+function UserGreeting(props) {
+  return <h2>Welcome back!</h2>;
+}
+
+function GuestGreeting(props) {
+  return <h2>Please sign up.</h2>;
+}
+
+function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  return isLoggedIn ? <UserGreeting /> : <GuestGreeting />;
+}
+
+export default Greeting;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q14: Student List Filter</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to right, #8360c3, #2ebf91);
+      padding: 30px;
+      color: #fff;
+    }
+    h1 {
+      color: #f0f8ff;
+    }
+    pre {
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 5px solid #f0f8ff;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    a {
+      color: #f0f8ff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q14: Student List Filter</h1>
+  <pre><code>import React, { useState } from 'react';
+
+function StudentList() {
+  const [search, setSearch] = useState('');
+  const students = ['Alice', 'Bob', 'Charlie', 'David'];
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search student"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <ul>
+        {students
+          .filter((s) => s.toLowerCase().includes(search.toLowerCase()))
+          .map((s) => (
+            <li key={s}>{s}</li>
+          ))}
+      </ul>
+    </div>
+  );
+}
+
+export default StudentList;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

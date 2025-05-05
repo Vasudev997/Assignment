@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q2: React Hooks</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #80deea);
+      color: #004d40;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      color: #00796b;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1em;
+    }
+    pre {
+      background: #e0f2f1;
+      border-left: 5px solid #00796b;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow-x: auto;
+      font-size: 1em;
+    }
+    code {
+      font-family: 'Courier New', monospace;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #00695c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q2: React Hooks</h1>
+  <p>This component demonstrates usage of <code>useState</code> and <code>useEffect</code> hooks.</p>
+  <pre><code>import React, { useState, useEffect } from 'react';
+
+function HookExample() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Count is ${count}`;
+  }, [count]);
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+export default HookExample;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>
