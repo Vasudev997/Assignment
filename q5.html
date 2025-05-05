@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q5: Voting Application</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: linear-gradient(to right, #a18cd1, #fbc2eb);
+      color: #4a148c;
+      padding: 30px;
+    }
+    h1 {
+      color: #6a1b9a;
+    }
+    pre {
+      background: #f3e5f5;
+      border-left: 5px solid #8e24aa;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    a {
+      color: #6a1b9a;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q5: Voting Application</h1>
+  <pre><code>import React, { useState } from 'react';
+
+function VotingApp() {
+  const [votes, setVotes] = useState(0);
+
+  return (
+    <div>
+      <h2>Votes: {votes}</h2>
+      <button onClick={() => setVotes(votes + 1)}>Vote</button>
+    </div>
+  );
+}
+
+export default VotingApp;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

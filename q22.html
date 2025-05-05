@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q22: Temperature Converter</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background: linear-gradient(to right, #fce4ec, #f8bbd0);
+      color: #880e4f;
+      padding: 20px;
+    }
+    h1 {
+      color: #c2185b;
+    }
+    pre {
+      background: #f48fb1;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #c2185b;
+    }
+    a {
+      color: #ad1457;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q22: Temperature Converter</h1>
+  <pre><code>import React, { useState } from 'react';
+
+function TempConverter() {
+  const [celsius, setCelsius] = useState('');
+
+  const fahrenheit = celsius ? (parseFloat(celsius) * 9 / 5 + 32).toFixed(2) : '';
+
+  return (
+    <div>
+      <input
+        type="number"
+        value={celsius}
+        onChange={(e) => setCelsius(e.target.value)}
+        placeholder="Celsius"
+      />
+      <p>{celsius && `Fahrenheit: ${fahrenheit} °F`}</p>
+    </div>
+  );
+}
+
+export default TempConverter;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

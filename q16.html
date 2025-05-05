@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q16: Todo List Application</title>
+  <style>
+    body {
+      font-family: 'Verdana', sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      padding: 30px;
+      color: #fff;
+    }
+    h1 {
+      color: #fff8dc;
+    }
+    pre {
+      background: rgba(0, 0, 0, 0.2);
+      border-left: 5px solid #fff8dc;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    a {
+      color: #ffe4c4;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q16: Todo List Application</h1>
+  <pre><code>import React, { useState } from 'react';
+
+function TodoApp() {
+  const [task, setTask] = useState('');
+  const [todos, setTodos] = useState([]);
+
+  const addTask = () => {
+    if (task.trim()) {
+      setTodos([...todos, task]);
+      setTask('');
+    }
+  };
+
+  return (
+    <div>
+      <input value={task} onChange={(e) => setTask(e.target.value)} placeholder="Add a task" />
+      <button onClick={addTask}>Add</button>
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>{todo}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default TodoApp;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>

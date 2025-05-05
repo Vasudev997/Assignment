@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q1: Props and State in React</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      color: #e65100;
+    }
+    pre {
+      background-color: #fff3e0;
+      border-left: 5px solid #ff9800;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow-x: auto;
+    }
+    a {
+      color: #e65100;
+    }
+  </style>
+</head>
+<body>
+  <h1>Q1: Props and State in React</h1>
+  <pre><code>import React, { useState } from 'react';
+
+function Greeting(props) {
+  return <h2>Hello, {props.name}!</h2>;
+}
+
+function App() {
+  const [name, setName] = useState('Student');
+
+  return (
+    <div>
+      <Greeting name={name} />
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+    </div>
+  );
+}
+
+export default App;
+  </code></pre>
+  <p><a href="index.html">Back to Homepage</a></p>
+</body>
+</html>
